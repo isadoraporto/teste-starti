@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de loja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="icon" type="image/png" sizes="32x32" href="icones/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icones/favicon-16x16.png">
+<link rel="icon" href="icones/favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="styleloja.css">
+  
+</head>
+<body>
+    <section class="tela" id="cadastroLoja">
+
+  <header class="topo">
+    <h1>Cadastro de Loja</h1>
+
+  
+    <span class="span">Usuário
+      <img class="img" src="img/Logo do Gestor Fácil.png" alt="Logo do sistema">
+    </span>
+
+  </header>
+
+  <div class="container">
+
+    <form class="form-loja">
+
+      <div class="grupo">
+        <label>Nome da Loja:</label>
+        <input type="text"
+        id="nomeloja"
+        placeholder="Digite o nome da sua loja aqui" required>
+      </div>
+
+      <div class="grupo">
+        <label>CNPJ:</label>
+        <input type="text" 
+           id="cnpj"
+        placeholder="Digite o CNPJ da loja aqui"
+        required>
+      </div>
+
+      <div class="grupo">
+        <label>Descrição:</label>
+        
+       <textarea id="descricao" 
+          required>
+  Faça uma breve descrição dos seus serviços.
+       </textarea>
+        
+      
+      </div>
+
+      <div class="grupo">
+        <label>Localização:</label>
+        <input type="text"
+           id="localizacao"
+        placeholder="Digite sua localização aqui: Obs: Atualize se necessário."
+         required>
+      </div>
+
+      <div class="grupo">
+        <label>Telefone / WhatsApp</label>
+        <input type="text"
+           id="telefone"
+        placeholder="Digite seu número mais atualizado aqui." 
+         required>
+      </div>
+
+      <div class="grupo">
+        <label>Email</label>
+        <input type="email"
+        id="email"
+        placeholder="Digite seu email aqui."
+        required>
+      </div>
+
+      <div class="grupo">
+        <label>Horário de Funcionamento</label>
+        <input type="text"
+        placeholder="Digite seu horário de funcionamento online e presencial.">
+      </div>
+
+      <div class="grupo">
+        <label>Categoria</label>
+        <select id="categoria">
+          <option>Selecione</option>
+
+          <option>Roupas e acessórios</option>
+          <option>Acessórios</option>
+          <option>Alimentos</option>
+          <option>Eletrônicos</option>
+          <option>Instrumentos musicais</option>
+          <option>Material escolar</option>
+          <option>Material de construção</option>
+          <option>Farmácia</option>
+    
+
+        </select>
+      </div>
+
+      <div class="grupo">
+        <label>Nome do Dono/Sócios</label>
+        <input type="text"
+        placeholder="Digite o nome do ou dos donos. ">
+      </div>
+
+      <div class="grupo">
+        <label>Telefone do Responsável</label>
+        <input type="text"
+        placeholder="Digite o telefone do responsável.">
+      </div>
+
+      <div class="botoes">
+       <button type="button" class="btn-salvar" onclick="salvarLoja()">
+  <span class="material-symbols-outlined">save</span>
+  Salvar
+</button>
+       <button type="button" class="btn-cancelar" onclick="cancelar()">
+  <span class="material-symbols-outlined">cancel</span>
+  Cancelar
+</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script>
+function salvarLoja() {
+    let loja = {
+        nome: document.getElementById("nomeloja").value,
+        cnpj: document.getElementById("cnpj").value,
+        descricao: document.getElementById("descricao").value,
+        localizacao: document.getElementById("localizacao").value,
+        telefone: document.getElementById("telefone").value,
+        email: document.getElementById("email").value,
+        categoria: document.getElementById("categoria").value
+    };
+
+    localStorage.setItem("loja", JSON.stringify(loja));
+    alert("Loja cadastrada com sucesso!");
+}
+
+function cancelar() {
+    document.querySelector(".form-loja").reset();
+}
+</script>
+</body>
+</html>

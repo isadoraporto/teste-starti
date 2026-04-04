@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de produtos</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylelistagem.css">
+</head>
+
+
+
+ 
+
+
+
+
+<body>
+
+<header class="topo">
+  <h1>Produtos</h1>
+  <span class="span">Usuário</span>
+</header>
+
+<main class="conteudo">
+
+  <p>Visualize e gerencie os produtos cadastrados no sistema.</p>
+  <!-- BUSCA E FILTROS -->
+  <section class="acoes-topo">
+    <input type="text" placeholder="Buscar produto..." class="buscar">
+    <button class="btn-filtrar">Filtrar</button>
+    <button class="btn-ordenar">Ordenar</button>
+    <button class="btn-novo" onclick="window.location.href='cadastro.html'">
+  Novo Produto
+</button>
+  </section>
+
+  <!-- LISTAGEM -->
+  <section class="lista-produtos">
+
+    <table>
+      <thead>
+      <tr>
+          <th>Imagem</th>
+          <th>Código</th>
+          <th>Produto</th>
+          <th>Estoque</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+     
+
+<tr onclick="verDetalhes('001')">
+  <td>-</td>
+  <td>001</td>
+  <td>Camiseta Azul</td>
+  <td>25</td>
+  <td>R$ 49,90</td>
+  <td class="acoes">
+    <button class="editar">Editar</button>
+    <button class="cor">Cor</button>
+    <button class="excluir">Excluir</button>
+  </td>
+</tr>
+
+<tr onclick="verDetalhes('002')">
+  <td>-</td>
+  <td>002</td>
+  <td>Tênis Preto</td>
+  <td>10</td>
+  <td>R$ 199,90</td>
+  <td class="acoes">
+    <button class="editar">Editar</button>
+    <button class="cor">Cor</button>
+    <button class="excluir">Excluir</button>
+  </td>
+</tr>
+
+<tr onclick="verDetalhes('003')">
+  <td>-</td>
+  <td>003</td>
+  <td>Boné vermelho</td>
+  <td>20</td>
+  <td>R$ 29,90</td>
+  <td class="acoes">
+    <button class="editar">Editar</button>
+    <button class="cor">Cor</button>
+    <button class="excluir">Excluir</button>
+  </td>
+</tr>
+
+<tr onclick="verDetalhes('004')">
+  <td>-</td>
+  <td>004</td>
+  <td>Short vermelho</td>
+  <td>15</td>
+  <td>R$ 79,90</td>
+  <td class="acoes">
+    <button class="editar">Editar</button>
+    <button class="cor">Cor</button>
+    <button class="excluir">Excluir</button>
+  </td>
+</tr>
+
+<tr onclick="verDetalhes('005')">
+  <td>-</td>
+  <td>005</td>
+  <td>Cinto</td>
+  <td>30</td>
+  <td>R$ 49,90</td>
+  <td class="acoes">
+    <button class="editar">Editar</button>
+    <button class="cor">Cor</button>
+    <button class="excluir">Excluir</button>
+  </td>
+</tr>
+
+</tbody>
+    </table>
+
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <p>Contato para feedbacks e melhorias: suporte@sistema.com</p>
+  <img class="img" src="img2/Logo do Gestor Fácil.png" alt="Logo do sistema">
+
+   <!--Colocado em baixo  pós rodapés de forma proposital-->
+</footer>
+
+<script>
+function verDetalhes(id) {
+  localStorage.setItem("produtoSelecionado", id);
+  window.location.href = "detalhes.html";
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe de produto</title>
+    <link rel="stylesheet" href="styledetalhes.css">
+</head>
+<body>
+    <header class="header">
+        <img class="img2" src="img/Logo do Gestor Fácil.png" alt="">
+<h2 class="h2">Detalhes do Produto</h2>
+<p class="p">Usuário | Sair</p>
+
+    </header>
+
+    <div class="container">
+    
+    <img class="img" src="img/camisaexemplo.png" alt="Camiseta azul exemplo">
+
+    <div class="info">
+        <h1 id="nome"></h1>
+        <p id="codigo"></p>
+        <p id="data"></p>
+        <p id="estoque"></p>
+        <p id="preco"></p>
+        <p id="cores"></p>
+    </div>
+
+</div>
+
+    <div class="div2">
+    <button class="b1">
+   🖊️ Editar produto
+    </button>
+     <button class="b2">
+    🗑️Excluir produto
+    </button>
+    <button class="b3" onclick="window.location.href='index.html'">
+⬅️ Voltar
+</button>
+   
+    </div>
+
+
+
+    <script>
+let id = localStorage.getItem("produtoSelecionado");
+
+let produtos = [
+  {
+    codigo: "001",
+    nome: "Camiseta Azul",
+    data: "10/03/2026",
+    estoque: 25,
+    preco: "49,90",
+    cores: "🔵⚪"
+  },
+  {
+    codigo: "002",
+    nome: "Tênis Preto",
+    data: "12/03/2026",
+    estoque: 10,
+    preco: "199,90",
+    cores: "⚫"
+  }
+];
+
+let produto = produtos.find(p => p.codigo === id);
+
+if (produto) {
+  document.getElementById("nome").innerText = "Nome: " + produto.nome;
+  document.getElementById("codigo").innerText = "Código: " + produto.codigo;
+  document.getElementById("data").innerText = "Data: " + produto.data;
+  document.getElementById("estoque").innerText = "Estoque: " + produto.estoque;
+  document.getElementById("preco").innerText = "Preço: R$ " + produto.preco;
+  document.getElementById("cores").innerText = "Cores: " + produto.cores;
+}
+</script>
+</body>
+
+</html>

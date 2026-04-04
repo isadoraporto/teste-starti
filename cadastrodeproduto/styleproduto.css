@@ -1,0 +1,90 @@
+*{
+    font-family: 'Manrope', sans-serif;
+  
+}
+
+.topo{
+  color:aliceblue;
+  background-color: #1E2A44;
+  width: 1900px;
+  height: 130px;
+
+
+.img {
+  width: 150px;
+  border-radius: 8px;
+
+  position: absolute;
+  left: 50%;
+    transform: translateX(-50%);
+
+}
+  
+
+}
+
+.span{
+margin-left: 1700px;
+}
+.form-container {
+  color: #1e408a;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #1E2A44;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color:#1E2A44 ;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.salvar {
+  background: #22C55E;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cancelar {
+  background: #DC2626;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  flex: 1;
+  transition: 0.2s;
+}
+.cancelar:hover {
+  background: #b91c1c;
+  
+}
