@@ -1,91 +1,198 @@
-# teste-starti
-Sistema Gestor Fácil
+# Documento de Requisitos
+## Sistema para gestão simples de lojas pequenas
 
-Sistema desenvolvido para auxiliar na gestão de lojas de pequeno e médio porte, com foco no controle de produtos e organização de estoque.
+**Autora:** Isadora Porto de Lira Gomes
 
-Sobre o projeto
+---
 
-O sistema foi criado para atender comércios locais e de bairro, permitindo o cadastro e gerenciamento de produtos de forma simples, intuitiva e eficiente, considerando usuários com diferentes níveis de conhecimento técnico.
+## Mini escopo estrutural do sistema Gestor Fácil
 
- Funcionalidades principais
+O sistema deve permitir a gestão de lojas de pequeno e médio porte, englobando comércio local e de bairro, facilitando o cadastro de produtos de forma completa.
 
-* Cadastro de produtos com:
+Entre as funcionalidades principais incluem:
 
-  * Código
-  * Nome
-  * Data de entrada
-  * Quantidade em estoque
-  * Preço
-  * Variações de cores
-* Listagem de produtos em formato de tabela
-* Busca, filtro e ordenação de produtos
-* Visualização detalhada dos produtos
-* Edição e exclusão de produtos
-* Associação de produtos a uma loja cadastrada
+- Código do produto
+- Nome do produto
+- Data de entrada
+- Quantidades disponíveis (considerando controle de estoque quinzenal)
+- Variações de cores
+- Preço
 
-Estrutura do sistema
+O segundo objetivo é permitir a **listagem de produtos** em formato de **lista ou tabela**, contendo todos os aspectos citados acima.  
+Além disso, o sistema deve possuir:
 
-O sistema é composto por 3 telas principais:
+- Mecanismo de busca
+- Filtro
+- Ordenação
 
- 1. Tela de listagem
+Essas funcionalidades facilitam a consulta e o gerenciamento de dados.
 
-* Exibição dos produtos em tabela
-* Botões de busca e filtro
-* Ações rápidas (editar, excluir, modificar)
+A solução foi pensada para atender o **controle básico de produtos em pequenas lojas**, oferecendo uma **interface intuitiva e de fácil visualização**, considerando que possam existir usuários de todos os níveis técnicos.
 
-2. Tela de cadastro
+A aplicação será composta por **três telas principais**:
 
-* Formulário centralizado e intuitivo
-* Campos organizados para facilitar o preenchimento
-* Botões de salvar e cancelar
+1. **Tela de listagem de produtos**
+   - Permite visualizar rapidamente os itens cadastrados.
 
- 3. Tela de detalhes
+2. **Tela de cadastro**
+   - Destinada à inserção de novos produtos.
 
-* Exibição completa das informações do produto
-* Opções de editar, excluir e voltar
+3. **Tela de detalhes**
+   - Apresenta informações completas de um produto selecionado.
 
-Tela complementar
+O foco principal do sistema é o **cadastramento de produtos**.  
+No entanto, para garantir a organização dos dados, **cada produto deve estar vinculado a uma loja previamente cadastrada**.
 
-* Cadastro de lojas com informações como:
+Dessa forma, o cadastro de lojas funciona como uma **etapa complementar do sistema**, permitindo identificar a origem dos produtos e manter a consistência das informações.
 
-  * Nome, CNPJ e descrição
-  * Localização
-  * Contato
-  * Horário de funcionamento
+---
 
- Interface do usuário
+# Campos e Botões do Sistema
 
-O sistema possui um design moderno, limpo e acessível, priorizando a usabilidade.
+## Campos de texto
 
-### Cores utilizadas:
+- Código do produto
+- Nome do produto
+- Data de chegada na loja
+- Cores disponíveis
+- Quantidade em estoque
+- Preço
 
-* Azul (#1E2A44): estrutura principal
-* Laranja (#F97316): ações importantes
-* Verde (#22C55E): confirmações
-* Off-white (#F9FAFB): fundo
-* Cinza: textos e descrições
+## Botões principais
 
- - Respostas
+- Cadastrar
+- Cancelar
+- Salvar
+- Editar produto
+- Excluir produto
+- Filtrar
+- Ordenar
+- Modificar cor do produto
 
-1. Quais campos de texto e botões são essenciais para cadastrar e listar um produto nesse software?
+---
 
-Resposta:
-Os campos essenciais para o cadastro de produtos são: código do produto, nome, data de entrada, quantidade em estoque, preço e variações de cores. Como opcional, pode-se incluir imagem do produto.
-Os botões principais incluem: cadastrar, salvar, cancelar, editar produto, excluir produto, filtrar e ordenar. Esses elementos garantem o controle completo dos dados e facilitam a gestão dos produtos.
+# Organização de elementos na tela (Experiência do Usuário)
 
- 2. Como você organizaria esses elementos nas telas para facilitar o uso pelo lojista?
+## 1. Tela de Listagem de Produtos
 
-Resposta:
-Os elementos são organizados de forma clara e intuitiva. Na tela de listagem, os filtros e busca ficam no topo, com os produtos exibidos em tabela e ações rápidas ao lado de cada item.
-Na tela de cadastro, o formulário é centralizado, com campos bem distribuídos e botões de ação destacados.
-Na tela de detalhes, as informações do produto são exibidas de forma completa e organizada, com opções de edição, exclusão e retorno à listagem.
-Essa organização facilita a navegação e melhora a experiência do usuário.
+- Botões de **busca e filtros** no topo da tela, grandes e claros do lado esquerdo
+- Exibição dos produtos em formato de **lista ou tabela**
+- Possibilidade de **imagens dos produtos (opcional)**
+- Ações simples ao lado de cada item:
+  - Editar
+  - Excluir
+  - Modificar cor
+- Rodapé com opção de **contato para feedbacks e melhorias do sistema**
 
- 3. Quais cores/identidade visual você usaria para a construção dessas interfaces?
+---
 
-Resposta:
-A identidade visual utiliza cores modernas e suaves para garantir boa usabilidade e acessibilidade. O azul profundo é usado na estrutura principal por transmitir confiança, o laranja destaca ações importantes, o verde indica confirmações, o off-white é utilizado como fundo para reduzir o cansaço visual e tons de cinza são usados para textos.
-Essa combinação proporciona uma interface limpa, profissional e fácil de usar.
+## 2. Tela de Cadastro de Produto
 
+- Botão **"NOVO PRODUTO"** centralizado e em destaque
+- **Login e usuário** no topo direito
+- Formulário centralizado na tela
 
-Projeto desenvolvido por Isadora Porto de Lira Gomes.
+### Campos do formulário
+
+- Código do produto
+- Nome do produto
+- Data de entrada
+- Quantidade em estoque
+- Preço
+- Cores disponíveis
+- (Opcional) Imagem do produto
+
+### Ações
+
+- **Salvar** (em destaque)
+- **Cancelar**
+
+---
+
+## 3. Tela de Detalhes do Produto
+
+- Título da página: **"Detalhes do Produto"**
+- Informações do usuário (login) no canto superior direito
+
+### Informações exibidas
+
+- **Nome do produto** (em destaque)
+- Código do produto
+- Data de entrada
+- Quantidade em estoque
+- Preço
+- Cores disponíveis (representadas visualmente, se possível)
+- Imagem do produto (caso cadastrada)
+
+### Ações disponíveis
+
+- **Editar produto** (redireciona para tela de edição)
+- **Excluir produto**
+- **Voltar** (retorna para listagem)
+
+---
+
+# 4. Tela Complementar — Cadastro de Loja
+
+Campos necessários:
+
+- Nome da loja
+- CNPJ
+- Descrição da loja (resumo + o que a loja oferece)
+- Fotos reais atualizadas  
+  - Atualização anual
+  - Limite de fotos
+- Localização
+  - Rua
+  - Número
+  - Bairro
+  - Cidade
+  - CEP
+  - Link de localização (Google Maps)
+- Data de abertura (opcional)
+- Seção de personalização (layout / tema)
+- Telefone / WhatsApp
+- Email
+- Horário de funcionamento
+- Categoria da loja (com opções limitadas)
+- Nome do dono / sócios
+- Telefone profissional do dono / sócios
+
+---
+
+# Interface do Usuário
+
+A identidade visual do sistema foi definida com foco em **clareza, acessibilidade e experiência do usuário**, priorizando um design **moderno, limpo e intuitivo**.
+
+A paleta de cores utiliza **tons suaves e profissionais**, evitando excesso de estímulos visuais e proporcionando uma navegação confortável.
+
+A **instintividade e acessibilidade** são extremamente importantes para os mecanismos de busca e para tornar o sistema fácil de usar, tanto para o usuário quanto para o programador compreender o código de forma mais semântica e organizada.
+
+---
+
+# Paleta de Cores
+
+### Azul profundo — `#1E2A44`
+Utilizado no **cabeçalho e elementos estruturais principais**.  
+Transmite **confiança, estabilidade e profissionalismo**.
+
+### Laranja vibrante — `#F97316`
+Utilizado em **botões de destaque** como:
+- Novo Produto
+- Filtrar
+
+Serve para **chamar atenção do usuário para ações importantes**.
+
+### Verde moderno — `#22C55E`
+Aplicado em botões de **confirmação**, como **Salvar**.  
+Representa **ações positivas e sucesso**.
+
+### Off-white — `#F9FAFB`
+Utilizado como **cor de fundo principal da aplicação**.  
+Reduz o cansaço visual e melhora a leitura.
+
+### Cinza médio — `#6B7280`
+Utilizado em **textos secundários e descrições**.
+
+### Cinza escuro — `#111827`
+Aplicado em **textos principais**, garantindo **alta legibilidade**.
